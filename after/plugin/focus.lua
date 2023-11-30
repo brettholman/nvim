@@ -29,3 +29,6 @@ require("focus").setup({
         winhighlight = false,              -- Auto highlighting for focussed/unfocussed windows
     }
 })
+
+vim.keymap.set("n", "<leader>|", vim.cmd.FocusSplitRight)
+vim.keymap.set("n", "<leader>-", vim.cmd.FocusSplitDown)
