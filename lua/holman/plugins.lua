@@ -13,8 +13,8 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     })
 
-    -- use({ 'rose-pine/neovim', as = 'rose-pine' })
-    use "EdenEast/nightfox.nvim"
+    use({ 'nvim-focus/focus.nvim' })
+    use({ "EdenEast/nightfox.nvim" })
     use({ 'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' } })
     use({ 'nvim-treesitter/playground' })
     use({ 'theprimeagen/harpoon' })
