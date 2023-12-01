@@ -44,6 +44,7 @@ require('mason-lspconfig').setup({
         'lua_ls',
         'rust_analyzer',
         'pylsp',
+        'biome',
     },
     handlers = {
         lsp.default_setup,

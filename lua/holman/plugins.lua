@@ -14,12 +14,14 @@ return require('packer').startup(function(use)
     })
 
     use({ 'nvim-focus/focus.nvim' })
+    use({ 'airblade/vim-gitgutter' })
     use({ "EdenEast/nightfox.nvim" })
     use({ 'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' } })
     use({ 'nvim-treesitter/playground' })
     use({ 'theprimeagen/harpoon' })
     use({ 'mbbill/undotree' })
     use({ 'tpope/vim-fugitive' })
+    use({ 'levouh/tint.nvim' })
 
     use({
         'VonHeikemen/lsp-zero.nvim',
