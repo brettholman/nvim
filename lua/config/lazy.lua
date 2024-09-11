@@ -63,3 +63,8 @@ require("cmp").setup({
 		{ name = "luasnip", group_index = 2 },
 	},
 })
+
+require("git-worktree").setup({})
+
+require("telescope").load_extension("git_worktree")
+require("telescope").load_extension("harpoon")

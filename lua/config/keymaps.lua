@@ -12,6 +12,12 @@ vim.keymap.set("n", "<Down>", "<nop>")
 vim.keymap.set("n", "<Left>", "<nop>")
 vim.keymap.set("n", "<Right>", "<nop>")
 
+local worktree_ext = require("telescope").extensions.git_worktree
+
+vim.keymap.set("n", "<leader>t", function()
+	worktree_ext.git_worktrees()
+end)
+
 local harpoon = require("harpoon")
 -- REQUIRED
 harpoon:setup({})
