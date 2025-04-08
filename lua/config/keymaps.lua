@@ -12,10 +12,8 @@ vim.keymap.set("n", "<Down>", "<nop>")
 vim.keymap.set("n", "<Left>", "<nop>")
 vim.keymap.set("n", "<Right>", "<nop>")
 
-local worktree_ext = require("telescope").extensions.git_worktree
-
 vim.keymap.set("n", "<leader>t", function()
-	worktree_ext.git_worktrees()
+	require("telescope").extensions.git_worktrees()
 end)
 
 local harpoon = require("harpoon")
@@ -50,3 +48,5 @@ end)
 vim.keymap.set("n", "<C-S-N>", function()
 	harpoon:list():next()
 end)
+
+vim.keymap.set("n", "<space>F", "<cmd>lua vim.lsp.buf.formatting()<CR>")

@@ -13,7 +13,8 @@ require("lazy").setup({
 			"LazyVim/LazyVim",
 			import = "lazyvim.plugins",
 			opts = {
-				colorscheme = "catppuccin",
+				colorscheme = "kanagawa",
+				-- colorscheme = "peachpuff",
 			},
 		},
 		-- import any extras modules here
@@ -22,8 +23,8 @@ require("lazy").setup({
 		{ import = "lazyvim.plugins.extras.linting.eslint" },
 		{ import = "lazyvim.plugins.extras.formatting.prettier" },
 		-- import/override with your plugins
-		{ import = "plugins" },
 		{ import = "lazyvim.plugins.extras.editor.harpoon2" },
+		{ import = "plugins" },
 	},
 	defaults = {
 		-- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
@@ -53,18 +54,26 @@ require("lazy").setup({
 	},
 })
 
-require("cmp").setup({
-	sources = {
-		-- Copilot Source
-		{ name = "copilot", group_index = 2 },
-		-- Other Sources
-		{ name = "nvim_lsp", group_index = 2 },
-		{ name = "path", group_index = 2 },
-		{ name = "luasnip", group_index = 2 },
-	},
-})
+-- require("cmp").setup({
+-- 	sources = {
+-- 		-- Other Sources
+-- 		{ name = "nvim_lsp", group_index = 2 },
+-- 		{ name = "path", group_index = 2 },
+-- 		{ name = "luasnip", group_index = 2 },
+-- 		-- Copilot Source
+-- 		{ name = "copilot", group_index = 2 },
+-- 	},
+-- })
 
-require("git-worktree").setup({})
+-- require("git-worktree").setup({})
 
 require("telescope").load_extension("git_worktree")
 require("telescope").load_extension("harpoon")
+require("telescope").load_extension("rest")
+-- require("telescope").load_extension("csharpls_definition")
+
+require("neo-tree").setup({
+	window = {
+		position = "float",
+	},
+})
